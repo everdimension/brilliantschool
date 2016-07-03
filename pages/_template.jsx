@@ -3,12 +3,11 @@ import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import 'normalize.css'
+import '../css/layout.css';
 
 import { rhythm } from 'utils/typography'
 
 import Navbar from '../components/Navbar';
-
-// const __svg__ = { path: '../svg/**/*.svg', name: './svg/[hash].sprite.svg' };
 
 class Template extends React.Component {
   static get propTypes() {
@@ -23,14 +22,26 @@ class Template extends React.Component {
     this.state = {
       isIndexPage: false,
     };
+    this.indexRoute = prefixLink('/');
   }
 
   componentDidMount() {
-    // console.log('__svg__', __svg__);
-    // require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
+    const currentPath = window.location.pathname;
     this.setState({
-      isIndexPage: window.location.pathname === prefixLink('/'),
+      currentPath,
+      isIndexPage: currentPath === this.indexRoute,
     });
+  }
+
+  componentWillUpdate() {
+    console.log('will update');
+    const currentPath = window.location.pathname;
+    if (this.state.currentPath !== currentPath) {
+      this.setState({
+        currentPath,
+        isIndexPage: currentPath === this.indexRoute,
+      });
+    }
   }
 
   render() {

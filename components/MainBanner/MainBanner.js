@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'react-responsive-grid'
-import { rhythm } from 'utils/typography'
+import { rhythm } from 'utils/typography';
 import './MainBanner.css'
 
 class MainBanner extends React.Component {
@@ -10,6 +10,7 @@ class MainBanner extends React.Component {
         <Container
           style={{
             maxWidth: 960,
+            padding: `${rhythm(1)} ${rhythm(1/2)}`,
           }}
         >
           Advanced language school
