@@ -1,8 +1,39 @@
 .MainBanner {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-bottom: 50px;
+  padding-top: 140px;
+  padding-bottom: 170px;
   color: white;
   background-image: url('https://images.unsplash.com/photo-1459017997738-b102a054b680?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=0fd5cc2d4a2e77ead3b0347e826d87db');
+  background-image: url('https://images.unsplash.com/photo-1429523062774-1269a132dd59?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=30262e93f1453e1af8216bf56924d59f');
+  background-image: url('https://images.unsplash.com/photo-1424126646991-4a0a07b9aa85?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=025f9a18d65cd4fdebff828be47fe283');
+  /*background-image: linear-gradient(to bottom,#b2cc1e,#7fcc1e 60%,#5bcc1e 100%);*/
   background-size: cover;
-  background-position: center bottom;
+  background-position: center 30%;
+  text-align: center;
+  & h1 {
+    color: white;
+  }
+}
+
+.BannerHeading {
+  font-family: 'Helvetica';
+  text-shadow: 0 0 130px rgba(0,0,0,0.5);
+}
+
+.BannerBrand {
+  display: inline-block;
+  padding-bottom: .3em;
+  border-bottom: 3px solid white;
+  margin-bottom: .3em;
+  line-height: 1;
+  font-size: 2em;
+}
+
+.BannerSubbrand {
+  display: inline-block;
+  /*padding-top: .7em;
+  border-top: 2px solid white;
+  margin-top: .7em;*/
+  line-height: 1;
+
 }

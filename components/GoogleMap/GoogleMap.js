@@ -38,10 +38,16 @@ class GoogleMap extends React.Component {
 
   initMap() {
     console.log('initializing map...');
+    const officeCoords = { lat: 55.757230, lng: 37.591102 };
     this.map = new google.maps.Map(this.mapElement, {
-      center: { lat: 55.757230, lng: 37.591102 },
-      zoom: 14,
+      center: officeCoords,
+      zoom: 16,
       scrollwheel: false,
+    });
+
+    this.marker = new google.maps.Marker({
+      position: officeCoords,
+      map: this.map,
     });
   }
 

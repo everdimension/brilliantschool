@@ -13,7 +13,12 @@ class MainBanner extends React.Component {
             padding: `${rhythm(1)} ${rhythm(1/2)}`,
           }}
         >
-          Advanced language school
+          <h1 className="BannerHeading">
+            <span className="BannerBrand">Brilliant</span>
+
+            <br />
+            <span className="BannerSubbrand">школа иностранных языков</span>
+          </h1>
         </Container>
 
       </div>

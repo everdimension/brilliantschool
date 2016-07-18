@@ -1,12 +1,12 @@
-import React from 'react';
-import './Logo.css';
+import React from 'react'
+import './Logo.css'
 
-function Logo() {
+function Logo () {
   return (
     <svg className="brilliant-logo">
       <use xlinkHref="#icon-logo" />
     </svg>
-  );
+  )
 }
 
-export default Logo;
+export default Logo

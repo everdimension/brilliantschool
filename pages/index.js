@@ -1,12 +1,10 @@
 import React from 'react'
 import { Container } from 'react-responsive-grid'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
-import MainBanner from '../components/MainBanner';
+import MainBanner from '../components/MainBanner'
 
-import { rhythm } from 'utils/typography';
+import { rhythm } from 'utils/typography'
 
 export default class Index extends React.Component {
   render () {
@@ -22,47 +20,20 @@ export default class Index extends React.Component {
               paddingTop: 0,
             }}
           >
-            <h1>
-              Hi people
-            </h1>
-            <p>Welcome to your new Gatsby site</p>
-            <h2>Below are some pages showing different capabilities built-in to Gatsby</h2>
-            <h3>Supported file types</h3>
-            <ul>
-              <li>
-                <Link to={prefixLink('/markdown/')}>Markdown</Link>
-              </li>
-              <li>
-                <Link to={prefixLink('/react/')}>JSX (React components)</Link>
-              </li>
-              <li>
-                <Link to={prefixLink('/coffee-react/')}>CJSX (Coffeescript React components)</Link>
-              </li>
-              <li>
-                <Link to={prefixLink('/html/')}>HTML</Link>
-              </li>
-              <li>
-                <Link to={prefixLink('/json/')}>JSON</Link>
-              </li>
-              <li>
-                <Link to={prefixLink('/yaml/')}>YAML</Link>
-              </li>
-              <li>
-                <Link to={prefixLink('/toml/')}>TOML</Link>
-              </li>
-            </ul>
-            <h3>Supported CSS processors</h3>
-            <ul>
-              <li>
-                <Link to={prefixLink('/postcss/')}>PostCSS</Link>
-              </li>
-              <li>
-                <Link to={prefixLink('/sass/')}>Sass</Link>
-              </li>
-              <li>
-                <Link to={prefixLink('/less/')}>Less</Link>
-              </li>
-            </ul>
+            <h2 style={{ textAlign: 'center' }}>Вы научитесь любить и чувствовать язык!</h2>
+            <p>
+              Наша школа предлагает вам возможность овладеть всеми необходимыми
+              навыками для комфортного общения на иностранном языке в условиях
+              современного мира.
+            </p>
+            <p>
+              В школе BRiLLᴉANT вы освоите красивый, полезный
+              и разноплановый английский язык на высоком качественном уровне,
+              укрепите уверенность в себе и своих способностях, преодолеете
+              языковой барьер и узнаете немало интересного о
+              межкультурной коммуникации.
+            </p>
+
           </Container>
         </div>
       </DocumentTitle>

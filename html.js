@@ -5,7 +5,8 @@ import { prefixLink } from 'gatsby-helpers'
 import { TypographyStyle } from 'utils/typography'
 
 const BUILD_TIME = new Date().getTime()
-const __svg__ = { path: '../svg/**/*.svg', name: './svg/sprite.svg' };
+// const __svg__ = { path: '../svg/**/*.svg', name: './assets/sprite.svg' }
+// require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__)
 
 module.exports = React.createClass({
   propTypes () {
@@ -33,7 +34,7 @@ module.exports = React.createClass({
           />
           <title>{title}</title>
           <link rel="shortcut icon" href={this.props.favicon} />
-          <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500&subset=cyrillic" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
           <TypographyStyle />
           {css}
         </head>

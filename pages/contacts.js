@@ -1,8 +1,7 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
-import { config } from 'config';
-import TestComp from '../components/TestComp';
-import GoogleMap from '../components/GoogleMap';
+import { config } from 'config'
+import GoogleMap from '../components/GoogleMap'
 
 export default class ReactComponent extends React.Component {
   constructor () {
@@ -23,13 +22,17 @@ export default class ReactComponent extends React.Component {
     return (
       <DocumentTitle title={`Контакты | ${config.siteTitle}`}>
         <div>
-          <h1>Контакты</h1>
-          <h3>Counter example</h3>
-          <p>{this.state.count}</p>
-          <button onClick={() => this.handlePlusClick()}>+</button>
-          <button onClick={() => this.handleMinusClick()}>-</button>
-          <hr />
-          <TestComp />
+          <h4 className="ContactsPhone">
+            <a
+              href="tel:+79055144510"
+            >+7 (905) 514-45-10</a>
+          </h4>
+          <p>
+            Большая Никитская, 43
+            <br />
+            121069, Москва
+          </p>
+
           <GoogleMap />
         </div>
       </DocumentTitle>

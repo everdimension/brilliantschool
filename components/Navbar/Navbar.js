@@ -4,10 +4,10 @@ import { rhythm } from 'utils/typography'
 import Headroom from 'react-headroom'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import Logo from '../Logo';
-import './Navbar.css';
+import Logo from '../Logo'
+import './Navbar.css'
 
-function Navbar() {
+function Navbar () {
   return (
     <Headroom>
       <header id="navbar" className="Navbar">
@@ -46,8 +46,8 @@ function Navbar() {
 
         </Container>
       </header>
-  </Headroom>
-  );
+    </Headroom>
+  )
 }
 
 export default Navbar;

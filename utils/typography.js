@@ -3,9 +3,10 @@ import Typography from 'typography'
 const options = {
   baseFontSize: '18px',
   baseLineHeight: '27px',
-  headerFontFamily: '"Ubuntu", serif',
+  headerFontFamily: '\'Open Sans\', Helvetica, Arial, sans-serif',
   headerGray: 40,
-  bodyFontFamily: '"Ubuntu", serif',
+  bodyGray: 0,
+  bodyFontFamily: '\'Open Sans\', Helvetica, Arial, sans-serif',
   bodyWeight: 400,
   headerWeight: 400,
   boldWeight: 600,
