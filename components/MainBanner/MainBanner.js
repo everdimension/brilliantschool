@@ -1,12 +1,20 @@
 import React from 'react'
 import { Container } from 'react-responsive-grid'
 import { rhythm } from 'utils/typography';
+import BackgroundImageLoader from '../BackgroundImageLoader'
 import './MainBanner.css'
 
+const imgPlaceholder = require('../../assets/city_bg_blur.jpg')
+const img = require('../../assets/city_bg_lg.jpg')
+
 class MainBanner extends React.Component {
-  render() {
+  render () {
     return (
-      <div className="MainBanner">
+      <BackgroundImageLoader
+        placeholder={imgPlaceholder}
+        url={img}
+        className="MainBanner"
+      >
         <Container
           style={{
             maxWidth: 960,
@@ -14,15 +22,15 @@ class MainBanner extends React.Component {
           }}
         >
           <h1 className="BannerHeading">
-            <span className="BannerBrand">Brilliant</span>
+            <span className="BannerBrand">brilliant</span>
 
             <br />
             <span className="BannerSubbrand">школа иностранных языков</span>
           </h1>
         </Container>
 
-      </div>
-    );
+      </BackgroundImageLoader>
+    )
   }
 }
 

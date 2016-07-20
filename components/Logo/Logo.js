@@ -1,11 +1,10 @@
 import React from 'react'
+import SvgIcon from '../SvgIcon';
 import './Logo.css'
 
 function Logo () {
   return (
-    <svg className="brilliant-logo">
-      <use xlinkHref="#icon-logo" />
-    </svg>
+    <SvgIcon className="brilliant-logo" name="logo" />
   )
 }
 

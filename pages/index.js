@@ -3,6 +3,7 @@ import { Container } from 'react-responsive-grid'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import MainBanner from '../components/MainBanner'
+import IndexFeature from '../components/IndexFeature'
 
 import { rhythm } from 'utils/typography'
 
@@ -20,19 +21,39 @@ export default class Index extends React.Component {
               paddingTop: 0,
             }}
           >
-            <h2 style={{ textAlign: 'center' }}>Вы научитесь любить и чувствовать язык!</h2>
             <p>
               Наша школа предлагает вам возможность овладеть всеми необходимыми
               навыками для комфортного общения на иностранном языке в условиях
               современного мира.
             </p>
             <p>
-              В школе BRiLLᴉANT вы освоите красивый, полезный
+              В школе &laquo;brilliant&raquo; вы освоите красивый, полезный
               и разноплановый английский язык на высоком качественном уровне,
               укрепите уверенность в себе и своих способностях, преодолеете
               языковой барьер и узнаете немало интересного о
               межкультурной коммуникации.
             </p>
+
+            <h2 className="IntroHeading">Вы научитесь любить и чувствовать язык!</h2>
+
+            <div className="grid">
+              <div className="grid-4">
+                <IndexFeature icon="cozy">
+                  комфортная обстановка (чай, кофе, сладости)
+                  удобное месторасположение в центре Москвы)
+                </IndexFeature>
+              </div>
+              <div className="grid-4">
+                <IndexFeature icon="teacher">
+                  молодые, эрудированные, энергичные и увлеченные преподаватели
+                </IndexFeature>
+              </div>
+              <div className="grid-4">
+                <IndexFeature icon="speech">
+                  мы поставим вам красивое и правильное произношение
+                </IndexFeature>
+              </div>
+            </div>
 
           </Container>
         </div>

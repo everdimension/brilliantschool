@@ -42,12 +42,15 @@
     "eslint-plugin-jsx-a11y": "^1.2.3",
     "eslint-plugin-react": "^5.1.1",
     "file-loader": "^0.9.0",
+    "gm": "^1.22.0",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.9.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.6",
+    "resize-image-loader": "^0.4.1",
     "style-loader": "^0.13.1",
+    "svg-sprite-generator": "0.0.7",
     "webpack": "^1.13.1",
     "webpack-svgstore-plugin": "^3.0.0"
   },
@@ -57,6 +60,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "svg-sprite": "svg-sprite-generate -d svg -o public/assets/sprite.svg",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
   }

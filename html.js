@@ -40,7 +40,13 @@ module.exports = React.createClass({
         </head>
         <body>
           {/* svg sprite */}
-          <div dangerouslySetInnerHTML={{ __html: require(`!raw!./svg/sprite.svg`) }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: require('!raw!./public/assets/sprite.svg') }}
+            style={{
+              position: 'absolute',
+              width: 0, height: 0,
+            }}
+          />
 
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />

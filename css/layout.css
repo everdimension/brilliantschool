@@ -4,6 +4,18 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #b2cc1e;
+  text-shahow: 0px 1px 0px rgba(72, 72, 72, 0.35);
+}
+
+.IntroHeading {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.brand-text {
+  color: #b2cc1e;
 }
 
 .ContactsPhone {
@@ -19,4 +31,22 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 16px;
+}
+
+.grid {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  &-4 {
+    width: 100%;
+    @media (min-width: 650px) {
+      width: 33.3333%;
+    }
+  }
+}
+
+[class^=grid-] {
+  float: left;
 }

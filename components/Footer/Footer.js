@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from 'react-responsive-grid'
 import { rhythm } from 'utils/typography'
 import { Link } from 'react-router'
+import SvgIcon from '../SvgIcon'
 import './Footer.css'
 
 class Footer extends React.Component {
@@ -17,9 +18,10 @@ class Footer extends React.Component {
           <div className="Footer__content">
             <div>
               <div className="Footer__logo">
-                <svg className="brilliant-logo">
-                  <use xlinkHref="#icon-logo_white" />
-                </svg>
+                <SvgIcon
+                  className="brilliant-logo"
+                  name="logo_white"
+                />
               </div>
 
 
