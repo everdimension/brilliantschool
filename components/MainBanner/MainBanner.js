@@ -4,8 +4,8 @@ import BackgroundImageLoader from '../BackgroundImageLoader'
 import SvgIcon from '../SvgIcon'
 import './MainBanner.css'
 
-const imgPlaceholder = require('../../assets/city_bg_blur.jpg')
-const img = require('../../assets/city_bg_lg.jpg')
+const imgPlaceholder = require('../../assets/img/city_bg_blur.jpg')
+const img = require('../../assets/img/city_bg_lg_mini.jpg')
 
 class MainBanner extends React.Component {
   render () {

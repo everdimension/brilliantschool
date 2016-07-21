@@ -22,11 +22,18 @@ export default class ReactComponent extends React.Component {
     return (
       <DocumentTitle title={`Контакты школы brilliant school | ${config.siteTitle}`}>
         <div>
-          <h4 className="ContactsPhone">
+          <h4>
             <a
+              className="ContactsPhone ContactsPhone--primary"
+              href="tel:+79151559405"
+            >+7 (915) 155-94-05</a>
+          </h4>
+          <p>
+            <a
+              className="ContactsPhone"
               href="tel:+79055144510"
             >+7 (905) 514-45-10</a>
-          </h4>
+          </p>
           <p>
             Большая Никитская, 43
             <br />

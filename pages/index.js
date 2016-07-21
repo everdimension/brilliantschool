@@ -38,18 +38,19 @@ export default class Index extends React.Component {
             <div className="grid">
               <div className="grid-4">
                 <IndexFeature icon="cozy">
-                  комфортная обстановка (чай, кофе, сладости);
-                  удобное месторасположение в центре Москвы
+                  Комфортная обстановка (чай, кофе, сладости)
+                  <br />
+                  Удобное месторасположение в центре Москвы
                 </IndexFeature>
               </div>
               <div className="grid-4">
                 <IndexFeature icon="teacher">
-                  молодые, эрудированные, энергичные и увлеченные преподаватели
+                  Молодые, эрудированные, энергичные и увлеченные преподаватели
                 </IndexFeature>
               </div>
               <div className="grid-4">
                 <IndexFeature icon="speech">
-                  мы поставим вам красивое и правильное произношение
+                  Мы поставим вам красивое и правильное произношение
                 </IndexFeature>
               </div>
             </div>

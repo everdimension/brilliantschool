@@ -6,6 +6,7 @@
 .FeatureIcon {
   text-align: center;
   &__svg {
+    height: 150px;
     width: 5em;
     fill: #999;
     color: #999;

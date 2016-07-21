@@ -1,10 +1,18 @@
 body {
   background-color: #fafafa;
+  line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #b2cc1e;
   text-shahow: 0px 1px 0px rgba(72, 72, 72, 0.35);
+}
+
+:root {
+  --brandBlue: #66c3d0;
+}
+a {
+  outline-color: var(--brandBlue);
 }
 
 .IntroHeading {
@@ -25,10 +33,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ContactsPhone {
-  & a {
-    color: black;
+  color: black;
+  text-decoration: none;
+  &--primary {
     font-size: 1.6em;
-    text-decoration: none;
     @media (min-width: 650px) {
       font-size: 2em;
     }

@@ -38,7 +38,7 @@ exports.modifyWebpackConfig = function (config, currentEnv) {
     config.plugin('faviconPlugin',
                   FaviconsWebpackPlugin,
                   [{
-                    logo: 'assets/favicon-original.png',
+                    logo: 'assets/favicon/favicon-original.png',
                     prefix: '/favicon/',
                   }])
   }

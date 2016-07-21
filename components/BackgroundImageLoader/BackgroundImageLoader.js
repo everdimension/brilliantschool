@@ -36,6 +36,7 @@ class BackgroundImageLoader extends React.Component {
         {...restProps}
         style={{
           backgroundImage: `url('${src}')`,
+          transition: 'background-image 0.3s ease-in-out',
         }}
       />
     )

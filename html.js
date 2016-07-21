@@ -23,7 +23,9 @@ module.exports = React.createClass({
     if (process.env.NODE_ENV === 'production') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
-    let faviconLink = <link rel="shortcut icon" href={require('!url!./assets/favicon.ico')} />
+    let faviconLink = (
+      <link rel="shortcut icon" href={require('!url!./assets/favicon/favicon.ico')} />
+    )
     if (process.env.NODE_ENV === 'production') {
       faviconLink = [
         <link rel="shortcut icon" href="/favicon/favicon.ico" />,

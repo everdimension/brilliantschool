@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import { Container } from 'react-responsive-grid'
 import { prefixLink } from 'gatsby-helpers'
 import 'normalize.css'
 import '../css/layout.css'
@@ -65,7 +64,7 @@ class Template extends React.Component {
     }
 
     return (
-      <div>
+      <div className="root">
         <Navbar />
         {body}
         <Footer />
