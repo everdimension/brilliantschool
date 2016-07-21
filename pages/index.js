@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from 'react-responsive-grid'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import MainBanner from '../components/MainBanner'
@@ -14,9 +13,9 @@ export default class Index extends React.Component {
         <div>
           <MainBanner />
 
-          <Container
+          <div
+            className="Container"
             style={{
-              maxWidth: 960,
               padding: `${rhythm(1)} ${rhythm(1/2)}`,
               paddingTop: 0,
             }}
@@ -39,8 +38,8 @@ export default class Index extends React.Component {
             <div className="grid">
               <div className="grid-4">
                 <IndexFeature icon="cozy">
-                  комфортная обстановка (чай, кофе, сладости)
-                  удобное месторасположение в центре Москвы)
+                  комфортная обстановка (чай, кофе, сладости);
+                  удобное месторасположение в центре Москвы
                 </IndexFeature>
               </div>
               <div className="grid-4">
@@ -55,7 +54,7 @@ export default class Index extends React.Component {
               </div>
             </div>
 
-          </Container>
+          </div>
         </div>
       </DocumentTitle>
     )

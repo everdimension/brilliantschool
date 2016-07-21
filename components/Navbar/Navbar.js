@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import { Container } from 'react-responsive-grid'
 import { rhythm } from 'utils/typography'
 import Headroom from 'react-headroom'
 import { Link } from 'react-router'
@@ -11,9 +10,9 @@ function Navbar () {
   return (
     <Headroom>
       <header id="navbar" className="Navbar">
-        <Container
+        <div
+          className="Container"
           style={{
-            maxWidth: 960,
             padding: `${rhythm(1)} ${rhythm(1/2)}`,
           }}
         >
@@ -44,7 +43,7 @@ function Navbar () {
             </div>
           </div>
 
-        </Container>
+        </div>
       </header>
     </Headroom>
   )

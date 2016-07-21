@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from 'react-responsive-grid'
 import { rhythm } from 'utils/typography'
 import { Link } from 'react-router'
 import SvgIcon from '../SvgIcon'
@@ -9,9 +8,9 @@ class Footer extends React.Component {
   render () {
     return (
       <div className="Footer">
-        <Container
+        <div
+          className="Container"
           style={{
-            maxWidth: 960,
             padding: `0 ${rhythm(1/2)}`,
           }}
         >
@@ -25,7 +24,14 @@ class Footer extends React.Component {
               </div>
 
 
-              <p>Большая Никитская, 43, Москва</p>
+              <p>
+                <a
+                  href="https://www.google.com/maps/place/Bolshaya+Nikitskaya+ul.,+43,+Moskva,+Russia,+121069/@55.757199,37.5889142,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54a4a232b18c1:0x8d849d293c120aaa!8m2!3d55.757199!4d37.5911029"
+                  target="_blank"
+                >
+                  Большая Никитская, 43, Москва
+                </a>
+              </p>
             </div>
 
             <nav className="Footer__nav">
@@ -39,7 +45,7 @@ class Footer extends React.Component {
               </ul>
             </nav>
           </div>
-        </Container>
+        </div>
       </div>
     )
   }

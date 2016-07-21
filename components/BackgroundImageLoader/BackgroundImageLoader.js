@@ -11,7 +11,7 @@ class BackgroundImageLoader extends React.Component {
     this.onImageLoad = this.onImageLoad.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.imgNode = new Image();
     this.imgNode.onload = this.onImageLoad;
     this.imgNode.src = this.props.url;

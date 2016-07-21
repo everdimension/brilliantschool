@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container } from 'react-responsive-grid'
-import { rhythm } from 'utils/typography';
+import { rhythm } from 'utils/typography'
 import BackgroundImageLoader from '../BackgroundImageLoader'
+import SvgIcon from '../SvgIcon'
 import './MainBanner.css'
 
 const imgPlaceholder = require('../../assets/city_bg_blur.jpg')
@@ -15,19 +15,20 @@ class MainBanner extends React.Component {
         url={img}
         className="MainBanner"
       >
-        <Container
+        <div
+          className="Container"
           style={{
             maxWidth: 960,
             padding: `${rhythm(1)} ${rhythm(1/2)}`,
           }}
         >
           <h1 className="BannerHeading">
-            <span className="BannerBrand">brilliant</span>
+            <SvgIcon className="BannerBrand BannerBrand--svg" name="logo_white" />
 
             <br />
             <span className="BannerSubbrand">школа иностранных языков</span>
           </h1>
-        </Container>
+        </div>
 
       </BackgroundImageLoader>
     )

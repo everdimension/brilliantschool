@@ -18,12 +18,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #b2cc1e;
 }
 
+.Container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .ContactsPhone {
-  text-align: center;
   & a {
     color: black;
-    font-size: 2em;
+    font-size: 1.6em;
     text-decoration: none;
+    @media (min-width: 650px) {
+      font-size: 2em;
+    }
   }
 }
 

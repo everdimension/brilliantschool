@@ -20,7 +20,7 @@ export default class ReactComponent extends React.Component {
 
   render () {
     return (
-      <DocumentTitle title={`Контакты | ${config.siteTitle}`}>
+      <DocumentTitle title={`Контакты школы brilliant school | ${config.siteTitle}`}>
         <div>
           <h4 className="ContactsPhone">
             <a

@@ -7,6 +7,9 @@
       width: 80px;
       height: 21px;
     }
+    & .nav {
+      line-height: 1.1;
+    }
   }
 }
 

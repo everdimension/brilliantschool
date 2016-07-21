@@ -25,21 +25,21 @@ class Template extends React.Component {
     this.indexRoute = prefixLink('/')
   }
 
-  componentDidMount () {
-    const currentPath = window.location.pathname
+  componentWillMount () {
+    const currentPath = this.props.location.pathname
     this.setState({
       currentPath,
       isIndexPage: currentPath === this.indexRoute,
     })
   }
 
-  componentWillUpdate () {
-    console.log('will update')
-    const currentPath = window.location.pathname
-    if (this.state.currentPath !== currentPath) {
+  componentWillUpdate (nextProps) {
+    const newPath = nextProps.location.pathname
+    const { currentPath } = this.state
+    if (newPath !== currentPath) {
       this.setState({
-        currentPath,
-        isIndexPage: currentPath === this.indexRoute,
+        currentPath: newPath,
+        isIndexPage: newPath === this.indexRoute,
       })
     }
   }
@@ -50,17 +50,17 @@ class Template extends React.Component {
       body = this.props.children
     } else {
       body = (
-        <Container
+        <div
+          className="Container"
           style={{
-            maxWidth: 960,
             padding: `${rhythm(1)} ${rhythm(1/2)}`,
             paddingTop: 0,
           }}
         >
-          <div className="PageBody">
+          <main role="main" className="PageBody">
             {this.props.children}
-          </div>
-        </Container>
+          </main>
+        </div>
       )
     }
 

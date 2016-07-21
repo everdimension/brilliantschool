@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
@@ -22,6 +23,22 @@ module.exports = React.createClass({
     if (process.env.NODE_ENV === 'production') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
+    let faviconLink = <link rel="shortcut icon" href={require('!url!./assets/favicon.ico')} />
+    if (process.env.NODE_ENV === 'production') {
+      faviconLink = [
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />,
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />,
+        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />,
+        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />,
+      ]
+    }
+
+    let svg
+    if (process.env.NODE_ENV === 'production') {
+      svg = require('!raw!./public/assets/sprite.svg')
+    } else {
+      svg = require('!raw!./temp/sprite.svg')
+    }
 
     return (
       <html lang="ru">
@@ -33,7 +50,7 @@ module.exports = React.createClass({
             content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
           />
           <title>{title}</title>
-          <link rel="shortcut icon" href={this.props.favicon} />
+          {faviconLink}
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
           <TypographyStyle />
           {css}
@@ -41,10 +58,11 @@ module.exports = React.createClass({
         <body>
           {/* svg sprite */}
           <div
-            dangerouslySetInnerHTML={{ __html: require('!raw!./public/assets/sprite.svg') }}
+            dangerouslySetInnerHTML={{ __html: svg }}
             style={{
               position: 'absolute',
               width: 0, height: 0,
+              overflow: 'hidden',
             }}
           />
 

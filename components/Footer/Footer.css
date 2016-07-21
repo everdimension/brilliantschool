@@ -20,6 +20,14 @@ body {
   font-size: .9em;
   font-weight: lighter;
 
+  & a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__logo {
     margin-bottom: 50px;
   }
