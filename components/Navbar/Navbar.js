@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { rhythm } from 'utils/typography'
 import Headroom from 'react-headroom'
 import { Link } from 'react-router'
@@ -16,7 +16,7 @@ function Navbar () {
             padding: `${rhythm(1)} ${rhythm(1/2)}`,
           }}
         >
-          <div className="NavContent">
+          <nav className="NavContent" role="navigation">
             <div className="NavContent__left">
               <Link
                 to={prefixLink('/')}
@@ -24,24 +24,23 @@ function Navbar () {
                   color: 'black',
                   textDecoration: 'none',
                 }}
+                aria-label="Brilliant school"
               >
                 <Logo />
               </Link>
             </div>
             {' '}
             <div className="NavContent__right">
-              <nav>
-                <ul className="nav">
-                  <li>
-                    <Link to="/about/">О школе</Link>
-                  </li>
-                  <li>
-                    <Link to="/contacts/">Контакты</Link>
-                  </li>
-                </ul>
-              </nav>
+              <ul className="nav">
+                <li>
+                  <Link to="/about/">О школе</Link>
+                </li>
+                <li>
+                  <Link to="/contacts/">Контакты</Link>
+                </li>
+              </ul>
             </div>
-          </div>
+          </nav>
 
         </div>
       </header>

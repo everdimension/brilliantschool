@@ -16,7 +16,7 @@ class Footer extends React.Component {
         >
           <div className="Footer__content">
             <div>
-              <div className="Footer__logo">
+              <div className="Footer__logo" aria-label="Brilliant school">
                 <SvgIcon
                   className="brilliant-logo"
                   name="logo_white"

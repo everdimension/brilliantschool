@@ -1,8 +1,18 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "brilliantschool",
+  "description": "Brilliant school static website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "everdimension",
+  "main": "n/a",
+  "scripts": {
+    "start": "npm run develop",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "svg-sprite": "svg-sprite-generate -d assets/svg -o public/assets/sprite.svg",
+    "imageoptim": "imageoptim --image-alpha --quit --directory ./assets/img",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.2.0",
     "babel-polyfill": "^6.9.1",
@@ -60,14 +70,5 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "svg-sprite": "svg-sprite-generate -d assets/svg -o public/assets/sprite.svg",
-    "imageoptim": "imageoptim --image-alpha --quit --directory ./assets/img",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "license": "MIT"
 }

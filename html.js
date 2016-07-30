@@ -4,7 +4,10 @@ import DocumentTitle from 'react-document-title'
 
 import { prefixLink } from 'gatsby-helpers'
 import { TypographyStyle } from 'utils/typography'
+import getMainMeta from './meta/getMainMeta'
+import getSocialMeta from './meta/getSocialMeta'
 
+const WEBSITE_ROOT = 'http://brilliantschool.ru'
 const BUILD_TIME = new Date().getTime()
 // const __svg__ = { path: '../svg/**/*.svg', name: './assets/sprite.svg' }
 // require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__)
@@ -20,8 +23,16 @@ module.exports = React.createClass({
     const title = DocumentTitle.rewind()
 
     let css
+    let mainMeta
+    let socialMetas
     if (process.env.NODE_ENV === 'production') {
+      const { pathname } = this.props.location
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+      mainMeta = getMainMeta(pathname)
+      socialMetas = getSocialMeta(pathname, this.props, {
+        WEBSITE_ROOT,
+        fallbackTitle: title,
+      })
     }
     let faviconLink = (
       <link rel="shortcut icon" href={require('!url!./assets/favicon/favicon.ico')} />
@@ -43,7 +54,7 @@ module.exports = React.createClass({
     }
 
     let analytics = null
-    if (process.env.NODE_ENV === 'production') {
+    if (false && process.env.NODE_ENV === 'production') {
       analytics = (
         <script
           dangerouslySetInnerHTML={{
@@ -70,7 +81,10 @@ module.exports = React.createClass({
             name="viewport"
             content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
           />
+          {mainMeta}
+          {socialMetas}
           <title>{title}</title>
+
           {faviconLink}
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
           <TypographyStyle />
