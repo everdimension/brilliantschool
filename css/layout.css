@@ -11,8 +11,10 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --brandBlue: #66c3d0;
 }
+
 a {
   outline-color: var(--brandBlue);
+  color: var(--brandBlue);
 }
 
 .IntroHeading {

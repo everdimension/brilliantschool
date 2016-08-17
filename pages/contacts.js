@@ -35,6 +35,9 @@ export default class ReactComponent extends React.Component {
             >+7 (905) 514-45-10</a>
           </p>
           <p>
+            <a href="mailto:airynnae@gmail.com">airynnae@gmail.com</a>
+          </p>
+          <p>
             Большая Никитская, 43
             <br />
             121069, Москва
