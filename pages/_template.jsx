@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { prefixLink } from 'gatsby-helpers'
 import 'normalize.css'
 import '../css/layout.css'
+import '../css/tables.css'
 
 import { rhythm } from 'utils/typography'
 

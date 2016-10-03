@@ -4,20 +4,6 @@ import { config } from 'config'
 import GoogleMap from '../components/GoogleMap'
 
 export default class ReactComponent extends React.Component {
-  constructor () {
-    super()
-    this.state = { count: 0 }
-  }
-  // AIzaSyAOsxnjLHuwUVL6HVjik_moNSqAtULtc6E
-
-  handlePlusClick () {
-    this.setState({ count: this.state.count + 1 })
-  }
-
-  handleMinusClick () {
-    this.setState({ count: this.state.count - 1 })
-  }
-
   render () {
     return (
       <DocumentTitle title={`Контакты школы brilliant school | ${config.siteTitle}`}>
@@ -25,17 +11,11 @@ export default class ReactComponent extends React.Component {
           <h4>
             <a
               className="ContactsPhone ContactsPhone--primary"
-              href="tel:+79151559405"
-            >+7 (915) 155-94-05</a>
+              href="tel:+79151596655"
+            >+7 (915) 159-66-55</a>
           </h4>
           <p>
-            <a
-              className="ContactsPhone"
-              href="tel:+79055144510"
-            >+7 (905) 514-45-10</a>
-          </p>
-          <p>
-            <a href="mailto:airynnae@gmail.com">airynnae@gmail.com</a>
+            <a href="mailto:info@brilliantschool.ru">info@brilliantschool.ru</a>
           </p>
           <p>
             Большая Никитская, 43

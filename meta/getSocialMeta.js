@@ -56,6 +56,10 @@ export default function getSocialMeta (pathname, props, { WEBSITE_ROOT, fallback
     <meta property="og:type" content="website" />,
     <meta property="og:url" content={`${WEBSITE_ROOT}${pathname}`} />,
     <meta property="og:description" content={ogDescription} />,
+    <meta
+      property="og:image"
+      content={`${WEBSITE_ROOT}/${require('../assets/meta/logo_asset.png')}`}
+    />,
     <meta property="og:site_name" content="Brilliant School" />,
     <meta property="og:locale" content="ru_RU" />,
   ]
